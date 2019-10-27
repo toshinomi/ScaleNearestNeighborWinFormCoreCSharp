@@ -94,6 +94,8 @@ namespace ScaleNearestNeighborWinFormCoreCSharp
             btnInit.Enabled = false;
             btnClose.Enabled = false;
             groupBoxScale.Enabled = false;
+            numericUpDown.Enabled = false;
+            btnGo.Enabled = false;
 
             progressBar.Value = 0;
             progressBar.Minimum = 0;
@@ -115,6 +117,8 @@ namespace ScaleNearestNeighborWinFormCoreCSharp
             btnInit.Enabled = true;
             btnClose.Enabled = true;
             groupBoxScale.Enabled = true;
+            numericUpDown.Enabled = true;
+            btnGo.Enabled = true;
 
             return;
         }
