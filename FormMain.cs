@@ -110,6 +110,10 @@ namespace ScaleNearestNeighborWinFormCoreCSharp
             {
                 pictureBox.Image = m_scaleImgProc.bitmap;
             }
+            else
+            {
+                pictureBox.ImageLocation = m_strOpenFileName;
+            }
 
             btnFileSelect.Enabled = true;
             btnSaveImage.Enabled = true;
@@ -153,6 +157,16 @@ namespace ScaleNearestNeighborWinFormCoreCSharp
                     }
                     bitmap.Dispose();
                 }
+            }
+
+            return;
+        }
+
+        private void OnClickBtnStop(object sender, EventArgs e)
+        {
+            if (m_tokenSource != null)
+            {
+                m_tokenSource.Cancel();
             }
 
             return;

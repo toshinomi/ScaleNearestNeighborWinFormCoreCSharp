@@ -42,6 +42,7 @@
             this.btnSaveImage = new System.Windows.Forms.Button();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.lblSelectFileName = new System.Windows.Forms.Label();
+            this.btnStop = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).BeginInit();
             // 
@@ -50,7 +51,7 @@
             this.groupBoxOperation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.groupBoxOperation.Location = new System.Drawing.Point(26, 74);
             this.groupBoxOperation.Name = "groupBoxOperation";
-            this.groupBoxOperation.Size = new System.Drawing.Size(475, 1158);
+            this.groupBoxOperation.Size = new System.Drawing.Size(481, 1158);
             this.groupBoxOperation.TabIndex = 0;
             this.groupBoxOperation.Text = "Operation";
             // 
@@ -90,9 +91,9 @@
             // groupBoxScale
             // 
             this.groupBoxScale.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.groupBoxScale.Location = new System.Drawing.Point(76, 795);
+            this.groupBoxScale.Location = new System.Drawing.Point(76, 796);
             this.groupBoxScale.Name = "groupBoxScale";
-            this.groupBoxScale.Size = new System.Drawing.Size(387, 265);
+            this.groupBoxScale.Size = new System.Drawing.Size(379, 398);
             this.groupBoxScale.TabIndex = 4;
             this.groupBoxScale.Text = "Scale";
             // 
@@ -101,7 +102,7 @@
             this.btnGo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnGo.Location = new System.Drawing.Point(111, 943);
             this.btnGo.Name = "btnGo";
-            this.btnGo.Size = new System.Drawing.Size(300, 74);
+            this.btnGo.Size = new System.Drawing.Size(300, 100);
             this.btnGo.TabIndex = 6;
             this.btnGo.Text = "Go";
             this.btnGo.UseVisualStyleBackColor = false;
@@ -166,6 +167,13 @@
             0,
             65536});
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            // 
             // btnSaveImage
             // 
             this.btnSaveImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -191,10 +199,22 @@
             this.lblSelectFileName.Size = new System.Drawing.Size(1118, 51);
             this.lblSelectFileName.TabIndex = 15;
             // 
+            // btnStop
+            // 
+            this.btnStop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnStop.Location = new System.Drawing.Point(111, 1068);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(300, 100);
+            this.btnStop.TabIndex = 17;
+            this.btnStop.Text = "Stop";
+            this.btnStop.UseVisualStyleBackColor = false;
+            this.btnStop.Click += new System.EventHandler(this.OnClickBtnStop);
+            // 
             // FormMain
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1700, 1300);
+            this.Controls.Add(this.btnStop);
             this.Controls.Add(this.lblSelectFileName);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.btnSaveImage);
@@ -233,6 +253,7 @@
         private System.Windows.Forms.Button btnSaveImage;
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Label lblSelectFileName;
+        private System.Windows.Forms.Button btnStop;
     }
 }
 
