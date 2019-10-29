@@ -28,6 +28,11 @@ class ScaleNearestNeighbor
     {
     }
 
+    public void Init()
+    {
+        m_bitmap = null;
+    }
+
     public bool GoImgProc(Bitmap _bitmap, float _fScale, CancellationToken _token, Form _form)
     {
         bool bRst = true;
