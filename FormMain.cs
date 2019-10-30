@@ -38,6 +38,8 @@ namespace ScaleNearestNeighborWinFormCoreCSharp
             {
                 m_mousePoint = new Point(e.X, e.Y);
             }
+
+            return;
         }
 
         private void OnMouseMoveFormMain(object sender, MouseEventArgs e)
@@ -47,6 +49,8 @@ namespace ScaleNearestNeighborWinFormCoreCSharp
                 this.Left += e.X - m_mousePoint.X;
                 this.Top += e.Y - m_mousePoint.Y;
             }
+
+            return;
         }
 
         private void OnClickBtnFileSelect(object sender, EventArgs e)
@@ -73,6 +77,8 @@ namespace ScaleNearestNeighborWinFormCoreCSharp
             {
                 this.Close();
             }
+
+            return;
         }
 
         private void OnClickBtnInit(object sender, EventArgs e)
@@ -83,6 +89,8 @@ namespace ScaleNearestNeighborWinFormCoreCSharp
             }
             m_scaleImgProc.Init();
             btnSaveImage.Enabled = false;
+
+            return;
         }
 
         private async void OnClickBtnGo(object sender, EventArgs e)
@@ -96,6 +104,7 @@ namespace ScaleNearestNeighborWinFormCoreCSharp
             btnSaveImage.Enabled = false;
             btnInit.Enabled = false;
             btnClose.Enabled = false;
+            btnCloseIcon.Enabled = false;
             numericUpDown.Enabled = false;
             btnGo.Enabled = false;
 
@@ -123,6 +132,7 @@ namespace ScaleNearestNeighborWinFormCoreCSharp
             btnFileSelect.Enabled = true;
             btnInit.Enabled = true;
             btnClose.Enabled = true;
+            btnCloseIcon.Enabled = true;
             numericUpDown.Enabled = true;
             btnGo.Enabled = true;
 
@@ -172,6 +182,13 @@ namespace ScaleNearestNeighborWinFormCoreCSharp
             {
                 m_tokenSource.Cancel();
             }
+
+            return;
+        }
+
+        private void OnClickBtnMinimizedIcon(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
 
             return;
         }

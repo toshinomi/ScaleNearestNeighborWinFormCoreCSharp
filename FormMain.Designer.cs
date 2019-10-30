@@ -43,6 +43,8 @@
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.lblSelectFileName = new System.Windows.Forms.Label();
             this.btnStop = new System.Windows.Forms.Button();
+            this.btnCloseIcon = new System.Windows.Forms.Button();
+            this.btnMinimizedIcon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).BeginInit();
             // 
@@ -210,10 +212,38 @@
             this.btnStop.UseVisualStyleBackColor = false;
             this.btnStop.Click += new System.EventHandler(this.OnClickBtnStop);
             // 
+            // btnCloseIcon
+            // 
+            this.btnCloseIcon.BackColor = System.Drawing.Color.Black;
+            this.btnCloseIcon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCloseIcon.ForeColor = System.Drawing.Color.White;
+            this.btnCloseIcon.Location = new System.Drawing.Point(1611, 2);
+            this.btnCloseIcon.Name = "btnCloseIcon";
+            this.btnCloseIcon.Size = new System.Drawing.Size(85, 50);
+            this.btnCloseIcon.TabIndex = 18;
+            this.btnCloseIcon.Text = "×";
+            this.btnCloseIcon.UseVisualStyleBackColor = false;
+            this.btnCloseIcon.Click += new System.EventHandler(this.OnClickBtnClose);
+            // 
+            // btnMinimizedIcon
+            // 
+            this.btnMinimizedIcon.BackColor = System.Drawing.Color.Black;
+            this.btnMinimizedIcon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMinimizedIcon.ForeColor = System.Drawing.Color.White;
+            this.btnMinimizedIcon.Location = new System.Drawing.Point(1510, 2);
+            this.btnMinimizedIcon.Name = "btnMinimizedIcon";
+            this.btnMinimizedIcon.Size = new System.Drawing.Size(85, 50);
+            this.btnMinimizedIcon.TabIndex = 19;
+            this.btnMinimizedIcon.Text = "-";
+            this.btnMinimizedIcon.UseVisualStyleBackColor = false;
+            this.btnMinimizedIcon.Click += new System.EventHandler(this.OnClickBtnMinimizedIcon);
+            // 
             // FormMain
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1700, 1300);
+            this.Controls.Add(this.btnMinimizedIcon);
+            this.Controls.Add(this.btnCloseIcon);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.lblSelectFileName);
             this.Controls.Add(this.progressBar);
@@ -254,6 +284,8 @@
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Label lblSelectFileName;
         private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.Button btnCloseIcon;
+        private System.Windows.Forms.Button btnMinimizedIcon;
     }
 }
 
